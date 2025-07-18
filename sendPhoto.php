@@ -3,12 +3,12 @@ include "move_files.php";
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
-$ftp_folder = '/home3/hoshiser/public_html/uploads'; 
-$log_file = "/home3/hoshiser/public_html/gallery/gallery_log.txt";
-$status_file = "/home3/hoshiser/public_html/gallery/status.txt";
+$ftp_folder = '/home/farnaz/public_html/uploads'; 
+$log_file = "/home/farnaz/public_html/gallery/gallery_log.txt";
+$status_file = "/home/farnaz/public_html/gallery/status.txt";
 
-$bot_token = "1284542720:noKHklmnAn63mgdYeEfrRpdf7GBYL4vivG4PVOuX";  
-$chat_id = "5994718214"; 
+$bot_token = "XXX";  
+$chat_id = "??"; 
 //
 $lock_file = "/tmp/sendphoto.lock";
 if (file_exists($lock_file) && (time() - filemtime($lock_file) < 60)) {
@@ -35,7 +35,7 @@ $new_files = array_diff($current_files, $previous_files);
 if (!empty($new_files)) {
     foreach ($new_files as $file) {
         $msg = "✅ درب پارکینگ باز شد:\n\n";
-        $file_url = "http://hoshiserver.ir/uploads/" . urlencode($file);
+        $file_url = "http://farnazboroumand.ir/uploads/" . urlencode($file);
         $msg .= date("Y-m-d H:i:s");
         sendMessage($msg, $file_url, $chat_id, $bot_token);
     } 

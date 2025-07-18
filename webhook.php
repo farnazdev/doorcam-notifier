@@ -1,6 +1,6 @@
 <?php
-$bot_token = '1284542720:noKHklmnAn63mgdYeEfrRpdf7GBYL4vivG4PVOuX';
-$status_file = "/home3/hoshiser/public_html/gallery/status.txt";
+$bot_token = 'XXX';
+$status_file = "/home/farnaz/public_html/gallery/status.txt";
 
 $content = file_get_contents("php://input");
 file_put_contents("log.txt", $content . PHP_EOL, FILE_APPEND);

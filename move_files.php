@@ -1,12 +1,12 @@
 <?php
-$sourceDir = '/home3/hoshiser/hoshiserver.ir/gallery';  
-$targetDir = '/home3/hoshiser/public_html/uploads'; 
+$sourceDir = '/home/farnaz/farnazboroumand.ir/gallery';  
+$targetDir = '/home/farnaz/public_html/uploads'; 
 
 if (!is_dir($sourceDir) || !is_dir($targetDir)) {
     die("❌ Folder not found!");
 }
 
-$files = glob($sourceDir . '/*.jpg'); // فقط فایل‌های jpg
+$files = glob($sourceDir . '/*.jpg'); // just jpg
 
 foreach ($files as $file) {
     if (is_file($file)) {
